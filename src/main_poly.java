@@ -1,0 +1,1 @@
+class student {    int id ;    String name;    student(int id , String name){        this.id=id;        this.name = name;        System.out.println("id : "+ id);        System.out.println("name : "+ name);    }}public class main_poly {    public  static  void main(String[] args){        student s = new student( 1 , "abhi");           }}

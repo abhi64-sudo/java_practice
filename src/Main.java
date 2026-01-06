@@ -1,3 +1,7 @@
+
+
+// object oriented programming concepts--------------------------------------------------
+
 //class main {
 //    public static void main(String[] args){
 //        class Animal
@@ -84,3 +88,189 @@
 //        emp1.displaydetial();
 //    }
 //}
+//class interst{
+//    int p;
+//    int r;
+//    int t;
+//    void calculateSI( int p, int r, int t){
+//         int SI = (p * r * t)/100;
+//        System.out.println(SI);
+//    }
+//}
+//public  class Main {
+//    public  static void main(String[] args){
+//        interst in = new interst();
+//        in.calculateSI(1000,5,3);
+//    }
+//
+//}
+//class Marks{
+//    int math;
+//    int eng;
+//    int hindi;
+//    int average;
+//     void calculateAverage(){
+//        average = (math+eng+hindi)/3;
+//        System.out.println(average);
+//        System.out.println(math);
+//         System.out.println(eng);
+//         System.out.println(hindi);
+//     }
+//}
+//public class Main {
+//    public static void main(String[] args){
+//        Marks m = new Marks();
+//        m.math=20;
+//        m.hindi=90;
+//        m.eng=34;
+//        m.calculateAverage();
+//    }
+//}
+
+//constructor-------------------
+//class student {
+//    student(){
+//        System.out.println("hey i am constroctor");
+//    }
+//}
+//public class Main {
+//
+//
+//    public static void main(String[] args) {
+//        new student();// this is a constructor
+//    }
+//}
+//class car{
+//    String brand;
+//    double price;
+//    car(){
+//
+//        System.out.println("car object created");
+//    }
+//
+//}
+//public class Main {
+//    public static void main(String[] args){
+//        car c = new car();
+//        student s = new student();
+//        student s1 = new student();
+//
+//    }
+//}
+// class student{
+//    student(){
+//        System.out.println("hey");
+//    }
+//
+//class employee{
+//    int id;
+//    String name;
+//    employee(int a , String b){
+//        id = a;
+//        name = b;
+//          System.out.println("id is "+a);
+//        System.out.println("name is "+b);
+//
+//    }
+//}
+//public class Main {
+//    public static void main(String[] args){
+//        employee e = new em
+
+
+// method overloading --------------------
+
+
+//class boy{
+//    void m(int a , int b , int c){
+//        int sum = a+b+c;
+//         System.out.println(sum);
+//    }
+//    void m(double A, double B){
+//           double sub = A - B;
+//           System.out.println(sub);
+//    }
+//}
+//public class Main {
+//    public static void main(String[] args){
+//            boy b = new boy();
+//            b.m(2,3,5);
+//            b.m(7,4);
+//    }
+//}
+
+
+
+// abstraction-----------------------------
+
+//
+//
+//
+//
+//
+//
+//
+//
+//abstract class shape {
+//   abstract void calculateArea();
+//}
+//class circle extends shape{
+//    double radius;
+//    circle(double radius){
+//        this.radius=radius;
+//
+//    }
+//
+//    @Override
+//    void calculateArea() {
+//        double area = Math.PI * radius*radius;
+//        System.out.println(area);
+//    }
+//}
+//class rectangle extends shape{
+//    double length , width;
+//    rectangle (double length , double width){
+//        this.length = length;
+//        this.width = width;
+//    }
+//
+//    @Override
+//    void calculateArea() {
+//        double area = length*width;
+//        System.out.println(area);
+//    }
+//}
+//public class Main {
+//    public static void main(String[] args) {
+//        shape c = new circle(5);
+//        c.calculateArea();
+//
+//        shape r = new rectangle(3 ,4);
+//        r.calculateArea();
+//    }
+//}
+
+abstract class bank{
+    abstract double  getintrestrte();
+}
+ class sbi extends bank{
+    @Override
+     double getintrestrte(){
+        return  6.0;
+    }
+ }
+ class hdfc extends bank {
+    @Override
+     double getintrestrte(){
+        return  5.6;
+    }
+ }
+
+
+ public class Main{
+    public  static  void main(String[] args){
+        bank s = new sbi();
+        System.out.println(s.getintrestrte());
+        bank h = new hdfc();
+       System.out.println( h.getintrestrte());}
+ }
