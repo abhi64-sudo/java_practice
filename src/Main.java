@@ -250,27 +250,68 @@
 //    }
 //}
 
-abstract class bank{
-    abstract double  getintrestrte();
-}
- class sbi extends bank{
-    @Override
-     double getintrestrte(){
-        return  6.0;
-    }
- }
- class hdfc extends bank {
-    @Override
-     double getintrestrte(){
-        return  5.6;
-    }
- }
+//abstract class bank{
+//    abstract double  getintrestrte();
+//}
+// class sbi extends bank{
+//    @Override
+//     double getintrestrte(){
+//        return  6.0;
+//    }
+// }
+// class hdfc extends bank {
+//    @Override
+//     double getintrestrte(){
+//        return  5.6;
+//    }
+// }
+//
+//
+// public class Main{
+//    public  static  void main(String[] args){
+//        bank s = new sbi();
+//        System.out.println(s.getintrestrte());
+//        bank h = new hdfc();
+//       System.out.println( h.getintrestrte());}
+// }
+//
 
 
- public class Main{
-    public  static  void main(String[] args){
-        bank s = new sbi();
-        System.out.println(s.getintrestrte());
-        bank h = new hdfc();
-       System.out.println( h.getintrestrte());}
+//employee salary calculation -----------------
+ 
+ abstract class employee{
+    abstract int calculatesalary();
  }
+  class fulltimeemp extends employee {
+    int monthlysalary;
+    fulltimeemp( int monthlysalary){
+        this.monthlysalary= monthlysalary;
+
+    }
+    @Override
+      int calculatesalary(){
+        return monthlysalary;
+    }
+  }
+  class parttime extends employee{
+    int hours;
+    int hourly;
+      parttime( int hours, int hourly) {
+         this.hourly = hourly;
+         this.hours = hours;
+     }
+    @Override
+      int calculatesalary(){
+         return hourly * hours;
+    }
+  }
+  public class Main{
+    public static void main(String[] args){
+        employee e = new fulltimeemp(4000);
+        employee m = new parttime(2,344);
+        System.out.println(e.calculatesalary());
+        System.out.println(m.calculatesalary());
+
+    }
+
+  }
